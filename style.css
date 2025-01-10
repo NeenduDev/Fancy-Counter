@@ -19,8 +19,8 @@ body {
 
 .counter {
   background-color: #bef227;
-  width: 476px;
-  height: 615px;
+  width: 470px;
+  height: 600px;
   border-radius: 12px;
   box-shadow: 0 25px 121px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -108,7 +108,7 @@ body {
 .counter__icon--plus {
 }
 
-@media (max-width: 680px) or (max-height: 730px) {
+@media (max-width: 680px) or (max-height: 630px) {
   .counter {
     width: 100%;
     height: 100%;
