@@ -1,9 +1,10 @@
 const COUNTER_LIMIT = 5;
 
+const counterEl = document.querySelector(".counter");
 const increaseButtonEl = document.querySelector(".counter__button--increase");
 const decreaseButtonEl = document.querySelector(".counter__button--decrease");
 const resetButtonEl = document.querySelector(".counter__reset-button");
-// console.log(decreaseButtonEl, increaseButtonEl, resetButtonEl);
+console.log(counterEl, decreaseButtonEl, increaseButtonEl, resetButtonEl);
 
 const counterValueEl = document.querySelector(".counter__value");
 // let counterValue = counterValueEl.textContent;
@@ -22,15 +23,18 @@ function updateCounterValue() {
   counterValueEl.textContent = counterValue;
 }
 
-// handle premium limit
+// handle premium limit with styling
 function handlePremium() {
   updateTitle(`Limit! buy pro for >${COUNTER_LIMIT}`);
+  counterEl.classList.add("counter--limit");
   return counterValue; // return unchanged value
 }
 
+// Handle decrease while managing limit styling
 function handleDecreaseWithoutMinus() {
   if (counterValue === 0) return 0;
   if (counterValue <= COUNTER_LIMIT) updateTitle();
+  counterEl.classList.remove("counter--limit");
   return --counterValue;
 }
 
