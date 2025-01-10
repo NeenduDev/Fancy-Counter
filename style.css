@@ -109,7 +109,7 @@ body {
 .counter__icon--plus {
 }
 
-@media (max-width: 680px) or (max-height: 630px) {
+@media (max-width: 680px) or (max-height: 600px) {
   .counter {
     width: 100%;
     height: 100%;
