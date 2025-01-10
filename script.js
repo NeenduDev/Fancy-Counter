@@ -15,7 +15,7 @@ console.log(titleEl);
 
 // Update title in DOM
 function updateTitle(message = "Fancy counter") {
-  titleEl.textContent = message;
+  titleEl.innerHTML = message;
 }
 
 // Update counter value in DOM
@@ -25,7 +25,7 @@ function updateCounterValue() {
 
 // handle premium limit with styling
 function handlePremium() {
-  updateTitle(`Limit! buy pro for >${COUNTER_LIMIT}`);
+  updateTitle(`Limit! buy <b>pro</b> for >${COUNTER_LIMIT}`);
   counterEl.classList.add("counter--limit");
   return counterValue; // return unchanged value
 }
