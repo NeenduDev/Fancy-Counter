@@ -32,7 +32,10 @@ function handlePremium() {
 
 // Handle decrease while managing limit styling
 function handleDecreaseWithoutMinus() {
-  if (counterValue === 0) return 0;
+  if (counterValue === 0) {
+    alert("No negative values");
+    return 0;
+  }
   if (counterValue <= COUNTER_LIMIT) updateTitle();
   counterEl.classList.remove("counter--limit");
   return --counterValue;
